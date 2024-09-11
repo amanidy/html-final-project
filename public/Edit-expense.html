@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker -Edit Expense</title>
+    <link rel="stylesheet" href="edit.css">
+</head>
+<body>
+    <div class="container">
+    <header>
+        <h1>Edit Expense</h1>
+    </header>
+
+    <section>
+        <form action="/edit-expense" method="POST">
+    <input type="hidden" id="expense-id" name="id">
+    <label for="date">Date:</label>
+    <input type="text" name="date" id="date" required>
+    <label for="amount">Amount:</label>
+    <input type="text" name="amount" id="amount" required>
+    <label for="category">Category:</label>
+    <input type="text" name="category" id="category" required>
+    <label for="description">Description:</label>
+    <textarea name="description" id="description"></textarea>
+    <button type="submit">Update Expense</button>
+</form>
+<p>Go back to the home page:<a href="home.html">Go Back</a></p>
+    </section>
+    <footer>
+        <p>&copy;Expense Tracker</p>
+    </footer>
+   </div> 
+   <script src="expense.js"></script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+section{
+    padding: 20px;
+}
+header{
+    background-color: cyan;
+    color: black;
+    padding: 10px;
+    text-align: center;
+}
+header nav a{
+    text-decoration: none;
+    color: #fff;
+    margin: 0 10px;
+}
+
+
+form button{
+    width: 50%;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #555;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #333;
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2rem;
+}
+
+table thead, table tr {
+    padding: 1rem;
+    border: 1px solid #ddd;
+}
+
+table thead {
+    background-color: #f4f4f4;
+}
+
+@media (max-width: 600px) {
+    form {
+        padding: 1rem;
+    }
+    
+    input, textarea {
+        font-size: 1rem;
+    }
+
+    button {
+        padding: 0.5rem 1rem;
+    }
+}
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+ form input, textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+

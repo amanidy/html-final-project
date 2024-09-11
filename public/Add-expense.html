@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker -Add Expense</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+    <header>
+        <h1>Add Expense</h1>
+    </header>
+
+    <section>
+        <form action="http://localhost:5000/add-expense" method="POST">
+        <label for="date">Date:</label>
+        <input type="text" name="date" id="date" required>
+        <label for="amount">Amount:</label>
+        <input type="number" name="amount" id="amount" required>
+        <label for="category">Category</label>
+        <input type="text" name="category" id="category" required>
+        <label for="description">Description:</label>
+        <textarea name="description" id="description"></textarea>
+        <button type="submit">Add Expense</button>
+        <p>Go back to the home page:<a href="home.html">Go Back</a></p>
+        </form>
+    </section>
+    <footer>
+        <p>&copy;Expense Tracker</p>
+    </footer>
+    </div>
+</body>
+</html>

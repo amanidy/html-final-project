@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Login Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Login</h1>
+        <form action="http://localhost:5000/login" method="POST">
+            <label for="username">Name:</label>
+            <input type="text" id="name" name="username" placeholder="Username" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required placeholder="Password">
+            <button type="submit">Submit</button>
+        </form>
+       <a href="register.html">Don't have an account?Register</a>
+    </div>
+    
+</body>
+</html>
