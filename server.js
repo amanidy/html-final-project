@@ -14,7 +14,7 @@ const port = 5000;
 dotenv.config();
 
 app.use(cors({
-    origin: 'http://localhost:5500', 
+    origin: true, 
     methods: ['GET', 'POST'],
     credentials: true
 }));
