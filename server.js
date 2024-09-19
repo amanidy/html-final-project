@@ -99,7 +99,7 @@ app.post('/add-expense', (req, res) =>{
 })
 
 app.get('/expenses', (req, res) => {
-    const query = 'SELECT DATE_FORMAT(date, "%Y-%m-%d") AS date, amount, category, description FROM expenses';
+    const query = 'SELECT DATE_FORMAT(date, "%Y-%m-%d") AS date,id, amount, category, description FROM expenses';
     db.query(query, (err, results) => {
         if (err) {
             console.error('Error retrival:', err);
@@ -154,14 +154,15 @@ app.get('/expenses/:id', (req, res) => {
 });
 
 
-app.post('/edit-expense', (req, res) => {
-    const { id, date, amount, category, description } = req.body;
-    const query = 'UPDATE expenses SET date = ?, amount = ?, category = ?, description = ? WHERE id = ?';
-    db.query(query, [date, amount, category, description, id], (err, result) => {
-        if (err) throw err;
-        console.log('Expense updated:', result);
-        res.redirect('/home.html');
-    });
+app.patch('/update-expense/:id', (req, res) => {
+  const id = req.params.id;
+  const { description, amount, category } = req.body;
+  const query = 'UPDATE expenses SET description = ?, amount = ?, category = ? WHERE id = ?';
+  db.query(query, [description, amount, category, id], (err, result) => {
+    if (err) throw err;
+    console.log('Expense updated:', result);
+    res.json({ message: 'Expense updated successfully' });
+  });
 });
 
 
